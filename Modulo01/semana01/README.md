@@ -12,7 +12,7 @@ Each of the two chapters in the course is accompanied by a Bioinformatics Cartoo
 <li>Code Challenge: Solve the Reverse Complement Problem</li>
 <li>Code Challenge: Solve the Pattern Matching Problem</li>
 <li>Code Challenge: Solve the Clump Finding Problem </li>
-<li>>Code Challenge: Implement ComputingFrequencies to generate a frequency array</li>
+<li>Code Challenge: Implement ComputingFrequencies to generate a frequency array</li>
 <li>Code Challenge: Implement PatternToNumber</li>
 <li>Code Challenge: Implement NumberToPattern</li>
 </ol>
