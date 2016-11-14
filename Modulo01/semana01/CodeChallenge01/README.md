@@ -7,9 +7,9 @@ Code Challenge: Implement PatternCount (reproduced below).<br>
         for i ← 0 to |Text| − |Pattern|
             if Text(i, |Pattern|) = Pattern
                 count ← count + 1
-        return count      
+        return count     
 Sample Input:<br>
     GCGCG<br>
-    GCG<br>
+    GCG<br><br>
 Sample Output:<br>
     2                  
