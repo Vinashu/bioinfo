@@ -7,8 +7,8 @@ function minimumSkew(text) {
     var max = text.length;
     var skew = [0]; 
     var menor = 100;   
-    for (var i = 1; i <= max; i++ ) {
-        switch(text.substring(i-1, i)){
+    for (var i = 1; i <= max +1; i++ ) {
+        switch(text.charAt(i-1)){
             case 'C':
                 skew[i] = skew[i-1] - 1;            
             break;
@@ -25,7 +25,7 @@ function minimumSkew(text) {
     return (procuraPos(0,max,skew,menor));
 }
 
-function procuraPos(inicio, fim, skew, menor) {
+function procuraPos(inicio, fim, skew, menor) {    
     if (skew.indexOf(menor, inicio+1) == -1){
         return "";
     } else {         

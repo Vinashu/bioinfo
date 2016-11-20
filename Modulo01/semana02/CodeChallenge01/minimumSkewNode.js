@@ -24,7 +24,8 @@ function minimumSkew(text) {
             menor = skew[i];
         }
     } 
-    return (procuraPos(0,max,skew,menor));
+    var resultado = procuraPos(0,max,skew,menor); 
+    return resultado.trim();
 }
 
 function procuraPos(inicio, fim, skew, menor) {
