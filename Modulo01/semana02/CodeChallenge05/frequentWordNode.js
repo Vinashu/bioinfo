@@ -19,10 +19,10 @@ function frequentWordsWithMismatches(text, k, d) {
     }
     for (var i = 0; i <= tam; i++){
         neighborhood = neighbors(text.substr(i, k), d);
-        neighborhood.forEach(function(pattern){
-            index = patternToNumber(pattern);
+        for(var j = 0; j < neighborhood.length; j++) {
+            index = patternToNumber(neighborhood[j]);
             close[index] =  1;
-        });
+        }       
     }
     var pattern;
     for (var i = 0; i <= max; i++){
