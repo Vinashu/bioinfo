@@ -68,6 +68,20 @@ console.log("Distances = " + distances);
 console.log("Result = " + (output === distances));
 console.log("............");
 
+pattern = "AA";
+text = "TACGCATTACAAAGCACA";
+mm = 1;
+output = 13;
+distances = aproximatePatternCount(pattern, text, mm);
+console.log("Teste 05...")
+console.log("Pattern = " + pattern);
+console.log("Text = " + text);
+console.log("Mismatch = " + mm);
+console.log("Output = " + output);
+console.log("Distances = " + distances);
+console.log("Result = " + (output === distances));
+console.log("............");
+
 function aproximatePatternCount(pattern, text, mm){
     var p = pattern.length;
     var max = text.length - p;
