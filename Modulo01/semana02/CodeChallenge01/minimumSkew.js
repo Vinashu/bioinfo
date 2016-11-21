@@ -1,13 +1,57 @@
 var text = "TAAAGACTGCCGAGAGGCCAACACGAGTGCTAGAACGAGGGGCGTAAACGCGGGTCCGAT";
+var output = "11 24"
 var skew = minimumSkew(text);
-console.log("Text = " + text + "\n");
-console.log("Skew = " + skew + "\n");
+console.log("Test 01");
+console.log("Text = " + text);
+console.log("Output = " + output);
+console.log("Skew = " + skew);
+console.log(skew.trim() === output);
+console.log(".......");
+
+text = "ACCG";
+output = "3"
+skew = minimumSkew(text);
+console.log("Test 02");
+console.log("Text = " + text);
+console.log("Output = " + output);
+console.log("Skew = " + skew);
+console.log(skew.trim() === output);
+console.log(".......");
+
+text = "ACCC";
+output = "4"
+skew = minimumSkew(text);
+console.log("Test 03");
+console.log("Text = " + text);
+console.log("Output = " + output);
+console.log("Skew = " + skew);
+console.log(skew.trim() === output);
+console.log(".......");
+
+text = "CCGGGT";
+output = "2"
+skew = minimumSkew(text);
+console.log("Test 04");
+console.log("Text = " + text);
+console.log("Output = " + output);
+console.log("Skew = " + skew);
+console.log(skew.trim() === output);
+console.log(".......");
+
+text = "CCGGCCGG";
+output = "2 6"
+skew = minimumSkew(text);
+console.log("Test 05");
+console.log("Text = " + text);
+console.log("Output = " + output);
+console.log("Skew = " + skew);
+console.log(skew.trim() === output);
+console.log(".......");
 
 function minimumSkew(text) {
     var max = text.length;
     var skew = [0]; 
-    var menor = 100;   
-    for (var i = 1; i <= max +1; i++ ) {
+    for (var i = 1; i <= max; i++ ) {
         switch(text.charAt(i-1)){
             case 'C':
                 skew[i] = skew[i-1] - 1;            
@@ -18,17 +62,17 @@ function minimumSkew(text) {
             default:
                 skew[i] = skew[i-1];            
         }
-        if (skew[i] < menor) {
-            menor = skew[i];
-        }
     } 
-    return (procuraPos(0,max,skew,menor));
+    var menor = Math.min.apply(null, skew)
+    var retorno = procuraPos(0,max,skew,menor) 
+    return retorno.trim();
 }
 
-function procuraPos(inicio, fim, skew, menor) {    
-    if (skew.indexOf(menor, inicio+1) == -1){
+function procuraPos(inicio, fim, skew, menor) { 
+    var valor = skew.indexOf(menor, inicio+1)    
+    if (valor == -1){
         return "";
     } else {         
-        return skew.indexOf(menor, inicio+1) + " " + procuraPos(skew.indexOf(menor, inicio+1),fim, skew, menor); 
+        return valor + " " + procuraPos(valor, fim, skew, menor); 
     }
 }

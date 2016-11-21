@@ -82,6 +82,18 @@ console.log("Distance = " + distance);
 console.log("Result = " + (output === distance));
 console.log("............")
 
+text1 = "CTACAGCAATACGATCATATGCGGATCCGCAGTGGCCGGTAGACACACGT ";
+text2 = "CTACCCCGCTGCTCAATGACCGGGACTAAAGAGGCGAAGATTATGGTGTG";
+output = 37;
+distance = hammingDistance(text1, text2);
+console.log("Teste 07...")
+console.log("Text1 = " + text1);
+console.log("Text2 = " + text2);
+console.log("Output = " + output);
+console.log("Distance = " + distance);
+console.log("Result = " + (output === distance));
+console.log("............")
+
 function hammingDistance(text1, text2) {
     var max = text1.length;
     var distance = 0;  
