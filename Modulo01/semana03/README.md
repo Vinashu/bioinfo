@@ -1,0 +1,3 @@
+Welcome to Week 3 of class!
+
+This week, we begin a new chapter, titled "Which DNA Patterns Play the Role of Molecular Clocks?" At the bottom of this message is this week's Bioinformatics Cartoon.  What does a late night casino trip with two 18th Century French mathematicians have in common with finding molecular clocks?  Start learning to find out...
