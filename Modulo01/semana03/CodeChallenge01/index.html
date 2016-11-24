@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<body>
+    <code>
+        Code Challenge: Implement MotifEnumeration (reproduced below).
+            Input: Integers k and d, followed by a collection of strings Dna.
+            Output: All (k, d)-motifs in Dna.
+
+            MotifEnumeration(Dna, k, d)
+                Patterns ← an empty set
+                for each k-mer Pattern in Dna
+                    for each k-mer Pattern’ differing from Pattern by at most d mismatches
+                        if Pattern' appears in each string from Dna with at most d mismatches
+                            add Pattern' to Patterns
+                remove duplicates from Patterns
+                return Patterns
+
+        Sample Input:
+            3 1
+            ATTTGGC
+            TGCCTTA
+            CGGTATC
+            GAAAATT
+        Sample Output:
+            ATA ATT GTT TTT                
+</body>
+</html>        
