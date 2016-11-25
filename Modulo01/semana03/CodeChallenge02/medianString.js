@@ -13,6 +13,42 @@ console.log(answer);
 console.log(output === answer);
 console.log("----------------");
 
+k = 3;
+dna = [
+    'AAATTGACGCAT',
+    'GACGACCACGTT',
+    'CGTCAGCGCCTG',
+    'GCTGAGCACCGG',
+    'AGTTCGGGACAG'
+];
+output = "GAC";
+answer = medianString(dna,k);
+console.log(output);
+console.log(answer);
+console.log(output === answer);
+console.log("----------------");
+
+k = 6;
+dna = [
+    'TATTGGGTATCACTTCTAGGATTAACTAAATTTTATGCCACG',
+    'GAAACTGGCTTATGAGAATTGCTAAAGAGTATCTTGGGCTTT',
+    'CTCAATTAAAGAGGCTTAACACGCTCAGCGACAGCATGCAAA',
+    'GGGTGAGGAAAGAGTCCCTTCGTACGCTCGGGCTTACAGGTA',
+    'CTTTCCATTCGACCACGTGGATTAGCGCGGTTTCAGTCCGGA',
+    'GATAGGGGATTAGCTCGATACCGACGGCTGGGGAAGGGTTTT',
+    'TTTCACCTGGACCGTTTAGTTATCGGTTTAGCCCGAACTATT',
+    'ATCGAGCGCATGCACGGACGGAGAATTTTAGGTTTAGACGGA',
+    'GGCTAAAGCCCCTCGTCGGATACGGGATTATCCAACCAACGT',
+    'CCGACTCCCCACTGACAACCACTCTCACTGGGCTTATCTACT'
+];
+
+output = "GGATTA";
+answer = medianString(dna,k);
+console.log(output);
+console.log(answer);
+console.log(output === answer);
+console.log("----------------");
+
 function medianString(dna, k) {
     var distance = Number.MAX_VALUE;
     var max = Math.pow(4,k)-1;
