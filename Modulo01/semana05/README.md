@@ -1,0 +1,1 @@
+Welcome to week 5 of the class! This week, we will apply popular motif-finding software in order to hunt for motifs in a real biological dataset.
