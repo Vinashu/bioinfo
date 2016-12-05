@@ -21,7 +21,6 @@ function runMoreTimes(dna, k, t, times){
             bestScore = motifsScore;
         }
     }
-    console.log(bestScore);
     return bestMotifs.join("\n");
 }
 
