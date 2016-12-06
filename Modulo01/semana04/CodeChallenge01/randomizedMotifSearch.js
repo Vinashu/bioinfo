@@ -8,7 +8,7 @@ var dna = [
     'AATCCACCAGCTCCACGTGCAATGTTGGCCTA'
 ];
 var output = "TCTCGGGG CCAAGGTG TACAGGCG TTCAGGTG TCCACGTG";
-var answer = runMoreTimes(dna, k, t, 1000);
+var answer = runMoreTimes(dna, k, t, 100000);
 console.log(output);
 console.log(answer);
 console.log(answer === output);
@@ -27,7 +27,7 @@ dna = [
     'GGTTAAAAGGCGCATCTTACTCTTTTCGCTTTCAAAAAAA'
 ];
 output = "CGATAA GGTTAA GGTATA GGTTAA GGTTAC GGTTAA GGCCAA GGTTAA";
-answer = runMoreTimes(dna, k, t, 1000);
+answer = runMoreTimes(dna, k, t, 100000);
 console.log(output);
 console.log(answer);
 console.log(answer === output);
@@ -46,7 +46,7 @@ dna = [
     'AATTGAACATCTTACTCTTTTCGCTTTCAAAAAAAAGGCC'
 ];
 output = "TTAACC ATAACT TTAACC TGAAGT TTAACC TTAAGC TTAACC TGAACA";
-answer = runMoreTimes(dna, k, t, 1000);
+answer = runMoreTimes(dna, k, t, 100000);
 console.log(output);
 console.log(answer);
 console.log(answer === output);
@@ -65,6 +65,7 @@ function runMoreTimes(dna, k, t, times){
             bestScore = motifsScore;
         }
     }
+
     console.log(bestScore);
     return bestMotifs.join(" ");
 }
@@ -79,7 +80,7 @@ function randomizedMotifSearch(dna, k, t){
         bestMotifs.push(text.substr(ini,k));
     }); 
     motifs = bestMotifs;
-    while(1){ 
+    while(true){ 
         profile = createProfileMatrix(motifs, k);
         for(var i = 0; i < t; i++){      
             motifs[i] =  profileMostProbable(dna[i], k, profile);

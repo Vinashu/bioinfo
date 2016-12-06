@@ -1,10 +1,11 @@
 process.stdin.on('data', function (chunk) {
   var args = chunk.toString().split("\n");
   var nums = args.shift();
+  nums = nums.split(" ");
   var k = parseInt(nums[0]);
   var t = parseInt(nums[1]);
   var dna = args;
-  result = runMoreTimes(dna, k, t, 1000);
+  result = runMoreTimes(dna, k, t, 100000);
   process.stdout.write(result);
 });
 
@@ -34,7 +35,7 @@ function randomizedMotifSearch(dna, k, t){
         bestMotifs.push(text.substr(ini,k));
     }); 
     motifs = bestMotifs;
-    while(1){ 
+    while(true){ 
         profile = createProfileMatrix(motifs, k);
         for(var i = 0; i < t; i++){      
             motifs[i] =  profileMostProbable(dna[i], k, profile);
@@ -172,22 +173,3 @@ function hammingDistance(text1, text2) {
     } 
     return (distance);
 }
-/*
-function distanceBetweenPatternAndStrings(pattern, dna){
-    var k = pattern.length;
-    var distance = 0;
-    var hDistance;
-    var patterns = [];
-    dna.forEach(function(text){
-        hDistance = Number.MAX_VALUE;
-        patterns = findPatterns(text,k);
-        patterns.forEach(function(kmer){
-            if (hDistance > hammingDistance(pattern, kmer)){
-                hDistance = hammingDistance(pattern, kmer);
-            }
-        })
-        distance = distance + hDistance
-    });
-    return distance
-}
-*/
