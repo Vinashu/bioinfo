@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script src='deBruijn.js' />
+</head>
+<body>
+    <script>
+        var reads = [
+            'GAGG',
+            'CAGG',
+            'GGGG',
+            'GGGA',
+            'CAGG',
+            'AGGG',
+            'GGAG'
+        ];
+
+        var output ='AGG -> GGG\nCAG -> AGG,AGG\nGAG -> AGG\nGGA -> GAG\nGGG -> GGA,GGG';
+        var answer = deBruijn(reads);
+        console.log(output + '\n');
+        console.log(answer);
+        console.log(answer === output);    
+    </script>
+</body>    
+</html>

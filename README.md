@@ -1,19 +1,10 @@
 # bioinfo
+Welcome to class!
 
-Estou fazendo um Curso de Especialização em Bioinfomática oferecido pela University of California (San Diego) por meio da plataforma Coursera.org.
+This course will focus on two questions at the forefront of modern computational biology, along with the algorithmic approaches we will use to solve them in parentheses:
 
-<strong>Journey to the Frontier of Computational Biology<br>
-Master bioinformatics software and computational approaches in modern biology.</strong>
+Weeks 1-2: How Do We Assemble Genomes? (Graph Algorithms)
 
-https://www.coursera.org/specializations/bioinformatics
+How Do We Sequence Antibiotics? (Brute Force Algorithms)
 
-A especialziação tem certificado e é composta por sete módulos e um trabalho de conclusão. O preço é de US$ 59 por módulo 
-<ol>
-<li>Finding Hidden Messages in DNA (Bioinformatics I)</li>
-<li>Genome Sequencing (Bioinformatics II)</li>
-<li>Comparing Genes, Proteins, and Genomes (Bioinformatics III)</li>
-<li>Molecular Evolution (Bioinformatics IV)</li>
-<li>Genomic Data Science and Clustering (Bioinformatics V)</li>
-<li>Finding Mutations in DNA and Proteins (Bioinformatics VI)</li>
-<li>Bioinformatics Capstone: Big Data in Biology</li>
-</ul>
+Each of the two chapters of content in the class is accompanied by a Bioinformatics Cartoon created by talented San Diego artist Randall Christopher. You can find the first chapter's cartoon at the bottom of this message. What does a time machine trip to 1735, a stack of newspapers, a jigsaw puzzle, and a giant ant invading a riverside city have to do with putting together a genome? Start learning today to find out!

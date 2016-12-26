@@ -1,8 +1,6 @@
 process.stdin.on('data', function (chunk) {
-    var data = chunk.toString().split("\n");
-    var k = data[0];
-    var text = data[1];
-    process.stdout.write(deBruijn(text, k));
+    var reads = chunk.toString().split("\n");
+    process.stdout.write(deBruijn(reads));
 });
 
 var Node = function(name) {  
@@ -54,31 +52,21 @@ Graph.prototype.printNodes = function() {
     var graph = [];
     for(var i = 0;i < this.node_list.length;i++){
         if(this.node_list[i].edge_list.length > 0){
+            this.node_list[i].edge_list.sort();
             graph.push(this.node_list[i].name + " -> " + this.node_list[i].edge_list);
         }
     }
+    graph.sort();    
     return graph.join("\n");
 }
 
-function deBruijn(text, k){
+function deBruijn(reads){
     var graph = new Graph();  
-    var reads = findPatterns(text, k);
     reads.forEach(function(read){
         graph.addEdge(prefix(read) ,sufix(read));  
     });
     return graph.printNodes();  
 }
-
-function findPatterns(text, k){
-    var patterns = [];
-    var max = text.length - k;
-    var pattern;
-    for(var i = 0; i <= max; i++){
-        pattern = text.substring(i, i+k);
-        patterns.push(pattern);
-    }
-    return patterns;
-}  
 
 function prefix(text){   
     return text.substr(0, text.length - 1);

@@ -23,7 +23,6 @@ Array.prototype.contains = function(name) {
 
 Graph.prototype.addEdge = function(start, end) {  
     var first = this.node_list.contains(start);
-    var second = this.node_list.contains(end);
     if(first){
         var i = this.node_list.length;
         while (i--) {
@@ -32,17 +31,15 @@ Graph.prototype.addEdge = function(start, end) {
                 break;    
             }
         }
+    } else {
+        var node = new Node(start);
+        node.addEdge(end);
+        this.node_list.push(node);
     }
-    if( (!first) || (!second) ){
-        if( !first ){
-            var node = new Node(start);
-            node.addEdge(end);
-            this.node_list.push(node);
-        }
-        if( !second ){
-            var node = new Node(end);
-            this.node_list.push(node);
-        }
+    var second = this.node_list.contains(end);       
+    if( !second ){
+        var node = new Node(end);
+        this.node_list.push(node);
     } 
 }
 
