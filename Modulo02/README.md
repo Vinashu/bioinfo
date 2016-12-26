@@ -1,0 +1,9 @@
+You may have heard a lot about genome sequencing and its potential to usher in an era of personalized medicine, but what does it mean to sequence a genome?
+
+Biologists still cannot read the nucleotides of an entire genome as you would read a book from beginning to end. However, they can read short pieces of DNA. In this course, we will see how graph theory can be used to assemble genomes from these short pieces. We will further learn about brute force algorithms and apply them to sequencing mini-proteins called antibiotics. 
+
+In the first half of the course, we will see that biologists cannot read the 3 billion nucleotides of a human genome as you would read a book from beginning to end.  However, they can read shorter fragments of DNA. In this course, we will see how graph theory can be used to assemble genomes from these short pieces in what amounts to the largest jigsaw puzzle ever put together.
+
+In the second half of the course, we will discuss antibiotics, a topic of great relevance as antimicrobial-resistant bacteria like MRSA are on the rise.  You know antibiotics as drugs, but on the molecular level they are short mini-proteins that have been engineered by bacteria to kill their enemies.  Determining the sequence of amino acids making up one of these antibiotics is an important research problem, and one that is similar to that of sequencing a genome by assembling tiny fragments of DNA.  We will see how brute force algorithms that try every possible solution are able to identify naturally occurring antibiotics so that they can be synthesized in a lab.
+
+Finally, you will learn how to apply popular bioinformatics software tools to sequence the genome of a deadly Staphylococcus bacterium that has acquired antibiotics resistance.
